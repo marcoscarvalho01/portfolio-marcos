@@ -1,7 +1,7 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/color-sharp.png"
-import { FaRobot, FaChartBar, FaCogs, FaCode, FaDatabase, FaCloud, FaMobile, FaBrain } from 'react-icons/fa';
+import { FaRobot, FaChartBar, FaCogs, FaDatabase, FaCloud, FaMobile, FaBrain } from 'react-icons/fa';
 
 export const Skills = () => {
   const responsive = {
@@ -30,7 +30,7 @@ export const Skills = () => {
             <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
+                        <h2>Services</h2>
                         <p>Passionate about leveraging cutting-edge technology to solve complex problems and drive innovation.<br></br> Here are the key areas where I excel and create impactful solutions.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
@@ -73,7 +73,7 @@ export const Skills = () => {
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+        <img className="background-image-left" src={colorSharp} alt="back-ground" />
     </section>
   )
 }

@@ -1,7 +1,7 @@
 // import logo from './logo.png';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { NavBar } from "./components/NavBar";
 import { Banner } from "./components/Banner";
 import { Skills } from "./components/Skills";
@@ -23,21 +23,13 @@ function HomePage() {
   );
 }
 
-function TestHome() {
-  return (
-    <div className="container" style={{ padding: '100px 0', color: 'white' }}>
-      <h1>Test Home Page</h1>
-      <p>If you can see this, routing is working correctly.</p>
-    </div>
-  );
-}
-
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
         </Routes>
       </Router>

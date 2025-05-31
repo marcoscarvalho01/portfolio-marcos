@@ -4,7 +4,6 @@ import headerImg from "../assets/img/round_bubble.gif";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import { Parallax } from 'react-parallax';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -48,8 +47,10 @@ export const Banner = () => {
     }
   }
   const handleConnectClick = () => {
-    window.location.hash = '';
-    window.location.hash = '#connect';
+    const element = document.getElementById('connect');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
   return (

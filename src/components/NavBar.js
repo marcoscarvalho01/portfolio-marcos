@@ -30,6 +30,13 @@ export const NavBar = () => {
     setActiveLink(value);
   }
 
+  const scrollToSection = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
     // Remove the Router wrapper here
     <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
@@ -42,9 +49,33 @@ export const NavBar = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-            <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-            <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+            <Nav.Link
+              className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => {
+                onUpdateActiveLink('home');
+                scrollToSection('home');
+              }}
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link
+              className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => {
+                onUpdateActiveLink('skills');
+                scrollToSection('skills');
+              }}
+            >
+              Services
+            </Nav.Link>
+            <Nav.Link
+              className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => {
+                onUpdateActiveLink('projects');
+                scrollToSection('projects');
+              }}
+            >
+              Projects (soon)
+            </Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
