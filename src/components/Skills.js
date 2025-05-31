@@ -1,11 +1,7 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
+import { FaRobot, FaChartBar, FaCogs, FaCode, FaDatabase, FaCloud, FaMobile, FaBrain } from 'react-icons/fa';
 
 export const Skills = () => {
   const responsive = {
@@ -35,23 +31,42 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p>Passionate about leveraging cutting-edge technology to solve complex problems and drive innovation.<br></br> Here are the key areas where I excel and create impactful solutions.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <FaRobot size={60} />
+                                <h5>AI Automated Workflows</h5>
+                                <p>Building intelligent automation systems that streamline business processes and increase efficiency through machine learning and AI integration.</p>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
+                                <FaChartBar size={60} />
+                                <h5>Power BI Dashboards</h5>
+                                <p>Creating dynamic, interactive dashboards that transform raw data into actionable insights for data-driven decision making.</p>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
+                                <FaCogs size={60} />
+                                <h5>Data Pipeline Automation</h5>
+                                <p>Designing robust ETL pipelines that automate data processing using Airflow and other python libraries, ensuring reliable and scalable data workflows.</p>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <FaDatabase size={60} />
+                                <h5>SQL</h5>
+                                <p>Expert in writing SQL queries and designing efficient relational data models for scalable applications.</p>
+                            </div>
+                            <div className="item">
+                                <FaCloud size={60} />
+                                <h5>Cloud Solutions</h5>
+                                <p>Implementing scalable cloud infrastructure using Google Cloud for enterprise-level applications.</p>
+                            </div>
+                            <div className="item">
+                                <FaBrain size={60} />
+                                <h5>Machine Learning</h5>
+                                <p>Developing predictive models and ML algorithms to extract valuable insights from complex datasets.</p>
+                            </div>
+                            <div className="item">
+                                <FaMobile size={60} />
+                                <h5>Mobile Development</h5>
+                                <p>Creating responsive mobile applications using React Native, with intuitive user interfaces.</p>
                             </div>
                         </Carousel>
                     </div>

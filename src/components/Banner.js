@@ -12,7 +12,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(100 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Power BI Expert", "Data Engineer", "Web Developer" ];
+  const toRotate = [ "AI Engineer","Power BI Expert", "Data Engineer",  ];
   const period = 1000;
 
   useEffect(() => {
@@ -62,8 +62,8 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hey, I'm Marcos!`} </h1>
-                <h1>{`I'm a `}<span className="txt-rotate" dataPeriod="2000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <h1>{`I'm a `}<span className="txt-rotate" dataPeriod="2000" ><span className="wrap">{text}</span></span></h1>
+                  <p>I'm an Artificial Intelligence Engineer and Power BI expert, dedicated to transforming raw data into actionable insights to drive strategic decision-making. My expertise allows me to create interactive and complex dashboards, as well as develop AI models that optimize processes and generate value for businesses.</p>
                   <button onClick={handleConnectClick}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
