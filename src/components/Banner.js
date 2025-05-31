@@ -61,7 +61,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
+                <span className="tagline">MarcDev</span>
                 <h1>{`Hey, I'm Marcos!`} </h1>
                 <h1>{`I'm a `}<span className="txt-rotate" dataPeriod="2000" ><span className="wrap">{text}</span></span></h1>
                   <p>I'm an Artificial Intelligence Engineer and Power BI expert, dedicated to transforming raw data into actionable insights to drive strategic decision-making. My expertise allows me to create interactive and complex dashboards, as well as develop AI models that optimize processes and generate value for businesses.</p>
