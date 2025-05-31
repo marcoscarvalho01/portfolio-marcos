@@ -5,7 +5,7 @@ import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon4.svg';
 import { HashLink } from 'react-router-hash-link';
-// Remove Router import - we don't need it here
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
 
@@ -75,6 +75,14 @@ export const NavBar = () => {
               }}
             >
               Projects (soon)
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/privacy-policy"
+              className={activeLink === 'privacy' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => onUpdateActiveLink('privacy')}
+            >
+              Privacy Policy
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
